@@ -18,11 +18,18 @@ The first step is building the appropriate cloud container using Docker. Docker 
 In my Github repository and project [blacklabelops/jenkins](https://github.com/blacklabelops/jenkins) I implemented a cloud-ready Jenkins master inside a Docker container. The project has elaborate documentation, feel free to roam and try it out. Managing Jenkins inside Docker required the following steps:
 
 1. Setting up a Dockerfile that installs Jenkins, Java and required software packages.
-1. Extending the Dockerfile by configuring Jenkins to use my pre-defined Docker Volume for persisting its settings and using it as the default workfolder.
-1. As a result I could write bash scripts in order to backup & restore the Docker Volume. Now I was able to resume my immutable container in any state.
-1. Define environment variables to be able to configure my container for specific use cases. Being able to control security setup, ports for slave connection and plugin installations.
-1. Environment variables are interpreted at startup and they use the docker-entrypoint script for applying their intend. The script itself is hooked inside the Dockerfile.
-1. Implementing several Groovy Scripts to execute the settings inside Jenkins, e.g. settings for security and the java virtual machine. Blacklabelops Groovy Scripts.
+1. Extending the Dockerfile by configuring Jenkins to use my pre-defined Docker Volume for persisting its settings and  
+   using it as the default workfolder.
+1. As a result I could write bash scripts in order to backup & restore the Docker Volume. Now I was able to resume my
+ immutable container in any state.
+1. Define environment variables to be able to configure my container for specific use cases. Being able to control
+ security setup, ports for slave connection and plugin installations.
+1. Environment variables are interpreted at startup and they use the docker-entrypoint script for applying their intend. 
+The script itself is hooked inside the Dockerfile.
+1. Implementing several Groovy Scripts to execute the settings inside Jenkins, e.g. settings for security and the java 
+virtual machine. Blacklabelops Groovy Scripts.
 
-The container is build and deployed by the public Docker registry Docker Hub and checked by Continuous Integration by Circle-CI. Docker Hub and Circle-CI are free for public Github Repositories. You can always check my repository for the current state of my project as build badges provide a good overview of my implementation state.
+The container is build and deployed by the public Docker registry Docker Hub and checked by Continuous Integration
+ by Circle-CI. Docker Hub and Circle-CI are free for public Github Repositories. You can always check my repository
+  for the current state of my project as build badges provide a good overview of my implementation state.
 
