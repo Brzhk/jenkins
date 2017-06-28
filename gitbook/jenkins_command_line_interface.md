@@ -10,7 +10,7 @@ First start the server:
 $ docker run -d -p 80:8080 --name jenkins blacklabelops/jenkins
 ~~~~
 
-> Jenkins will be available at http://yourdockerhost:8090.
+> Jenkins will be available at http://your_docker_host:8090.
 
 ## Running CLI Locally
 

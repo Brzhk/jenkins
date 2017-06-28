@@ -4,15 +4,15 @@ set -o errexit    # abort script at first error
 
 function testPrintVersion() {
   local tagname=$1
-  docker run --rm blacklabelops/jenkins:$tagname --version
+  docker run --rm blacklabelops/jenkins:${tagname} --version
 }
 
 function testImage() {
   local tagname=$1
   local port=$2
   local iteration=0
-  docker run -d -p $port:8080 --name=jenkins.$tagname blacklabelops/jenkins:$tagname
-  while ! curl -v http://localhost:$port
+  docker run -d -p ${port}:8080 --name=jenkins.${tagname} blacklabelops/jenkins:${tagname}
+  while ! curl -v http://localhost:${port}
   do
       { echo "Exit status of curl: $?"
         echo "Retrying ..."
@@ -24,7 +24,7 @@ function testImage() {
       fi
       sleep 10
   done
-  docker stop $tagname
+  docker stop ${tagname}
 }
 
 testPrintVersion $1

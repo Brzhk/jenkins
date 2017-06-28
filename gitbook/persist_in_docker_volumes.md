@@ -31,7 +31,7 @@ $ docker exec -it jenkins bash
 ... you operations here....
 ~~~~
 
-> Connects and runs bash inside your running Jenkins. You will be directed to the directory `/jenkins` because it's defined as the container's workfolder.
+> Connects and runs bash inside your running Jenkins. You will be directed to the directory `/jenkins` because it's defined as the container's work folder.
 
 You can check with a separate container:
 

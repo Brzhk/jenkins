@@ -18,4 +18,4 @@ $ vagrant ssh
 
 > Jenkins will be available on localhost:9200 on the host machine.
 
-Vagrant does not leave any docker artifacts on your beloved desktop and the vagrant image can simply be destroyed and repulled if anything goes wrong. Test my project to your heart's content!
+Vagrant does not leave any docker artifacts on your beloved desktop and the vagrant image can simply be destroyed and pulled again if anything goes wrong. Test my project to your heart's content!

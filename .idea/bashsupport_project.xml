@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BashSupportProjectSettings">
+    <option name="globalVariables">
+      <set>
+        <option value="BACKUP_CONTAINER" />
+        <option value="BACKUP_DIR" />
+        <option value="BACKUP_DIRECTORY" />
+        <option value="BACKUP_FILE_PREFIX" />
+        <option value="CONTAINER_NAME" />
+        <option value="CONTAINER_VOLUME" />
+        <option value="CUR_DIR" />
+        <option value="FILE_TIMESTAMP" />
+        <option value="HOST_PORT" />
+        <option value="IMAGE_NAME" />
+        <option value="JAVA_HOME" />
+        <option value="JAVA_VM_PARAMETERS" />
+        <option value="JENKINS_ADMIN_EMAIL" />
+        <option value="JENKINS_ADMIN_PASSWORD" />
+        <option value="JENKINS_ADMIN_USER" />
+        <option value="JENKINS_CERTIFICATE_DNAME" />
+        <option value="JENKINS_DELAYED_START" />
+        <option value="JENKINS_ENV_FILE" />
+        <option value="JENKINS_HOME" />
+        <option value="JENKINS_KEYSTORE_PASSWORD" />
+        <option value="JENKINS_LOG_FILE" />
+        <option value="JENKINS_MASTER_EXECUTORS" />
+        <option value="JENKINS_PARAMETERS" />
+        <option value="JENKINS_PLUGINS" />
+        <option value="JENKINS_PRODUCTION_SETTINGS" />
+        <option value="JENKINS_SLAVEPORT" />
+        <option value="JENKINS_STABLE_VERSION" />
+        <option value="JENKINS_VERSION" />
+        <option value="LOGFILE_DIRECTORY" />
+        <option value="LOGFILE_FILE_PREFIX" />
+        <option value="LOGS_DIR" />
+        <option value="RESTORE_CONTAINER" />
+        <option value="ROOT_DIR" />
+        <option value="SMTP_CHARSET" />
+        <option value="SMTP_HOST" />
+        <option value="SMTP_PORT" />
+        <option value="SMTP_REPLYTO_ADDRESS" />
+        <option value="SMTP_USER_NAME" />
+        <option value="SMTP_USER_PASS" />
+        <option value="SMTP_USE_SSL" />
+        <option value="UTILITY_IMAGE" />
+      </set>
+    </option>
+  </component>
+</project>

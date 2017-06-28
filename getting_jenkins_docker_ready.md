@@ -1,8 +1,8 @@
 # Getting Jenkins Cloud Ready
 
-Jenkins is a continuous integration tool for software development. You can define jobs, integration and deployment and schedule their execution. It's one of the most important tools in software development. The developer does not have to wait for a feedback but will be informed with detailed infos on how his new feature has fared inside the environments.
+Jenkins is a continuous integration tool for software development. You can define jobs, integration and deployment and schedule their execution. It's one of the most important tools in software development. The developer does not have to wait for a feedback but will be informed with detailed info on how his new feature has fared inside the environments.
 
-Jenkins tend to get bulky in time. Projects have to set up their unique demands, e.g. software versions and installations (Java 6-8, Tomcat, JBoss, Websphere).  As a result, a master-slave setup can ease the complexity of setting up Jenkins but setting up the master-slave environment itself remains.
+Jenkins tend to get bulky in time. Projects have to set up their unique demands, e.g. software versions and installations (Java 6-8, Tomcat, JBoss, WebSphere).  As a result, a master-slave setup can ease the complexity of setting up Jenkins but setting up the master-slave environment itself remains.
 
 The perfect solution is the cloud where you can setup any complex environment with containers and setup templates. Especially the Google Compute Engine looks interesting as you pay for use and you do not have any setup costs.
 
@@ -19,7 +19,7 @@ In my Github repository and project [blacklabelops/jenkins](https://github.com/b
 
 1. Setting up a Dockerfile that installs Jenkins, Java and required software packages.
 1. Extending the Dockerfile by configuring Jenkins to use my pre-defined Docker Volume for persisting its settings and  
-   using it as the default workfolder.
+   using it as the default work folder.
 1. As a result I could write bash scripts in order to backup & restore the Docker Volume. Now I was able to resume my
  immutable container in any state.
 1. Define environment variables to be able to configure my container for specific use cases. Being able to control

@@ -10,39 +10,15 @@ set -o nounset    # treat unset variables and parameters as an error
 # Setting environment variables
 readonly CUR_DIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 
-printf '%b\n' ":: Reading scrips config...."
-source $CUR_DIR/scripts.cfg
-
 printf '%b\n' ":: Reading container config...."
-source $CUR_DIR/container.cfg
+source ${CUR_DIR}/container.cfg
 
-# Helper functions
-err() {
-  printf '%b\n' ""
-  printf '%b\n' "\033[1;31m[ERROR] $@\033[0m"
-  printf '%b\n' ""
-  exit 1
-} >&2
+printf '%b\n' ":: Reading scripts config...."
+source ${CUR_DIR}/scripts.cfg
 
-success() {
-  printf '%b\n' ""
-  printf '%b\n' "\033[1;32m[SUCCESS] $@\033[0m"
-  printf '%b\n' ""
-}
+printf '%b\n' ":: importing helper functions...."
+source ${CUR_DIR}/common.lib.sh
 
-lookForImage() {
-  local IMAGE_LIST=$(docker images | awk '{print $1}')
-  local IMAGE_FOUND="false"
-  
-  for image in $IMAGE_LIST
-  do
-    if [ $image = $IMAGE_NAME ]; then
-      IMAGE_FOUND="true"
-    fi
-  done
-
-  echo $IMAGE_FOUND
-}
 
 #------------------
 # SCRIPT ENTRYPOINT
@@ -50,8 +26,8 @@ lookForImage() {
 
 found=$(lookForImage)
 
-if [ $found = "false" ]; then
-  err ""$IMAGE_NAME" not found"
+if [ ${found} = "false" ]; then
+  err ""${IMAGE_NAME}" not found"
 fi
 
 printf '%b\n' ""
@@ -61,8 +37,8 @@ docker rmi ${IMAGE_NAME}
 
 found=$(lookForImage)
 
-if [ $found = "true" ]; then
-  err ""$IMAGE_NAME" still found, removing failed."
+if [ ${found} = "true" ]; then
+  err ""${IMAGE_NAME}" still found, removing failed."
 fi
 
 success "Image removed successfully."

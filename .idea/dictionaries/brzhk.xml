@@ -1,23 +1,66 @@
 <component name="ProjectDictionaryState">
   <dictionary name="brzhk">
     <words>
+      <w>ansible</w>
       <w>antisamy</w>
       <w>autofavorite</w>
+      <w>awseb</w>
+      <w>bckp</w>
       <w>bertin</w>
       <w>blacklabelops</w>
+      <w>bleul</w>
       <w>blueocean</w>
       <w>bouncycastle</w>
+      <w>buildscripts</w>
+      <w>busybox</w>
+      <w>centos</w>
+      <w>classvalue</w>
       <w>cliversion</w>
       <w>cloudbees</w>
+      <w>conc</w>
+      <w>crontab</w>
+      <w>dgroovy</w>
+      <w>dhudson</w>
+      <w>dname</w>
+      <w>dockerdev</w>
+      <w>dockerized</w>
+      <w>entrypoint</w>
+      <w>entryscript</w>
+      <w>extendentrypoint</w>
+      <w>gcloud</w>
+      <w>gitbook</w>
+      <w>gitlab</w>
+      <w>groupid</w>
+      <w>heroku</w>
+      <w>hipchat</w>
+      <w>imagelayers</w>
+      <w>keystoreswordfish</w>
+      <w>latestdockerdev</w>
+      <w>letsencrypt</w>
+      <w>loggly</w>
       <w>momentjs</w>
       <w>multibranch</w>
+      <w>myenvs</w>
+      <w>parameterized</w>
+      <w>pinger</w>
       <w>pubsub</w>
+      <w>replyto</w>
+      <w>retag</w>
+      <w>rsnapshot</w>
+      <w>rsnapshotd</w>
       <w>slaveport</w>
       <w>smtp</w>
       <w>structs</w>
       <w>tagname</w>
+      <w>timestamper</w>
+      <w>userguide</w>
+      <w>userid</w>
       <w>userpass</w>
+      <w>vagrantup</w>
+      <w>virtualbox</w>
+      <w>vmoptions</w>
       <w>webhook</w>
+      <w>webroot</w>
     </words>
   </dictionary>
 </component>

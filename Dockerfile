@@ -88,16 +88,16 @@ LABEL com.blacklabelops.application.jenkins.version=$JENKINS_VERSION-$JENKINS_RE
 # Entrypoint Environment Variables
 ENV JAVA_VM_PARAMETERS="-Xmx512m -XX:ParallelGCThreads=4 -XX:ConcGCThreads=4 -Dhudson.slaves.ChannelPinger.pingIntervalSeconds=-1 -Dhudson.security.ExtendedReadPermission=true -Dgroovy.use.classvalue=true" \
     JENKINS_PRODUCTION_SETTINGS=false \
-    JENKINS_MASTER_EXECUTORS= \
     JENKINS_SLAVEPORT=50000 \
-    JENKINS_PLUGINS= \
-    JENKINS_PARAMETERS= \
-    JENKINS_KEYSTORE_PASSWORD= \
-    JENKINS_CERTIFICATE_DNAME= \
-    JENKINS_ENV_FILE= \
-    JENKINS_DELAYED_START= \
-    JENKINS_CLI_URL=http://localhost:8080 \
-    JENKINS_CLI_SSH=
+    JENKINS_CLI_URL="http://localhost:8080"
+#    JENKINS_CLI_SSH=
+#    JENKINS_PARAMETERS= \
+#    JENKINS_KEYSTORE_PASSWORD= \
+#    JENKINS_PLUGINS= \
+#    JENKINS_CERTIFICATE_DNAME= \
+#    JENKINS_ENV_FILE= \
+#    JENKINS_DELAYED_START= \
+#    JENKINS_MASTER_EXECUTORS= \
 
 WORKDIR ${JENKINS_HOME}
 VOLUME ["${JENKINS_HOME}"]

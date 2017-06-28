@@ -24,4 +24,4 @@ $ docker run -d \
 
 > Mounts all volumes from the running container and snapshots the volume /jenkins inside the local
 snapshot directory under `jenkins/`. Note: If you use Windows then you will have to replace $(pwd)
-with an abolute path.
+with an absolute path.

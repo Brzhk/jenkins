@@ -3,15 +3,15 @@
 # A helper script for ENTRYPOINT.
 #
 # If first CMD argument is 'jenkins', then the script will bootstrap Jenkins
-# If CMD argument is overriden and not 'jenkins', then the user wants to run
+# If CMD argument is overridden and not 'jenkins', then the user wants to run
 # his own process.
 
 set -o errexit
 
 readonly CUR_DIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 
-source $CUR_DIR/clicreation.sh
-source $CUR_DIR/initsecuritysettings.sh
+source ${CUR_DIR}/clicreation.sh
+source ${CUR_DIR}/initsecuritysettings.sh
 
 if [ -n "${JENKINS_DELAYED_START}" ]; then
   sleep ${JENKINS_DELAYED_START}
@@ -34,11 +34,11 @@ fi
 
 if [ "$1" = 'jenkins' ]; then
 
-  source $CUR_DIR/initexecutors.sh
-  source $CUR_DIR/initslaveport.sh
-  source $CUR_DIR/initplugins.sh
-  source $CUR_DIR/initemails.sh
-  source $CUR_DIR/initadmin.sh
+  source ${CUR_DIR}/initexecutors.sh
+  source ${CUR_DIR}/initslaveport.sh
+  source ${CUR_DIR}/initplugins.sh
+  source ${CUR_DIR}/initemails.sh
+  source ${CUR_DIR}/initadmin.sh
 
   if [ -n "${JENKINS_KEYSTORE_PASSWORD}" ] && [ -n "${JENKINS_CERTIFICATE_DNAME}" ]; then
     if [ ! -f "${JENKINS_HOME}/jenkins_keystore.jks" ]; then
